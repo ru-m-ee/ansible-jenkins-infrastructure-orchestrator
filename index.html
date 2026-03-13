@@ -1,28 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Alu Bepari | Modern E-Commerce</title>
+    <title>আলু ব্যাপারী | প্রিমিয়াম অর্গানিক আলু</title>
     <style>
         /* CSS Reset & Basic Styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Hind Siliguri', 'Segoe UI', Tahoma, sans-serif;
         }
 
         body {
-            background-color: #f8f9fa;
-            color: #212529;
+            background-color: #fefce8;
+            color: #422006;
             line-height: 1.6;
         }
 
         /* Header & Navigation */
         header {
             background-color: #ffffff;
-            color: #1a1a1a;
             padding: 1rem 8%;
             display: flex;
             justify-content: space-between;
@@ -30,15 +29,18 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
         }
 
         .logo {
-            font-size: 1.6rem;
-            font-weight: 800;
-            color: #2563eb; /* Primary Blue */
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #b45309;
             text-transform: uppercase;
-            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #ca8a04;
         }
 
         nav ul {
@@ -51,22 +53,22 @@
         }
 
         nav ul li a {
-            color: #4b5563;
+            color: #713f12;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
             transition: 0.3s;
         }
 
         nav ul li a:hover {
-            color: #2563eb;
+            color: #ca8a04;
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1518977676601-b53f02bad675?auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
-            height: 450px;
+            height: 500px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -79,27 +81,31 @@
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 15px;
-            font-weight: 800;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
         }
 
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             margin-bottom: 25px;
-            max-width: 600px;
+            max-width: 700px;
+            font-weight: 300;
         }
 
         .shop-now-btn {
-            background-color: #2563eb;
+            background-color: #ca8a04;
             color: white;
-            padding: 12px 30px;
+            padding: 15px 40px;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 50px;
             font-weight: bold;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 15px rgba(202, 138, 4, 0.4);
             transition: 0.3s;
         }
 
         .shop-now-btn:hover {
-            background-color: #1d4ed8;
+            background-color: #a16207;
+            transform: scale(1.05);
         }
 
         /* Product Grid */
@@ -112,155 +118,155 @@
         .section-title {
             text-align: center;
             margin-bottom: 3rem;
-            font-size: 2.2rem;
-            font-weight: 700;
+            font-size: 2.5rem;
+            color: #713f12;
         }
 
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
         }
 
         .product-card {
             background: white;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
             text-align: center;
-            transition: all 0.3s ease;
-            border: 1px solid #eee;
+            transition: 0.3s;
+            border: 2px solid transparent;
         }
 
         .product-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-color: #fde047;
+            transform: translateY(-5px);
         }
 
         .product-card img {
-            max-width: 100%;
-            height: 220px;
+            width: 100%;
+            height: 200px;
             object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 15px;
+            border-radius: 15px;
+            margin-bottom: 20px;
         }
 
         .product-card h3 {
+            font-size: 1.5rem;
             margin-bottom: 10px;
-            font-size: 1.25rem;
-            color: #1f2937;
+            color: #422006;
+        }
+
+        .product-card p.desc {
+            font-size: 0.95rem;
+            color: #71717a;
+            margin-bottom: 15px;
+            height: 45px;
         }
 
         .price {
-            color: #2563eb;
-            font-weight: 700;
-            font-size: 1.3rem;
+            color: #b45309;
+            font-weight: 800;
+            font-size: 1.5rem;
             margin-bottom: 20px;
         }
 
         .add-to-cart {
-            background-color: #1f2937;
-            color: white;
+            background-color: #422006;
+            color: #fefce8;
             border: none;
             padding: 12px;
-            border-radius: 8px;
+            border-radius: 10px;
             cursor: pointer;
-            font-weight: 600;
+            font-weight: 700;
             width: 100%;
             transition: 0.2s;
+            font-size: 1rem;
         }
 
         .add-to-cart:hover {
-            background-color: #111827;
+            background-color: #ca8a04;
         }
 
         /* Footer */
         footer {
-            background-color: #111827;
-            color: #9ca3af;
+            background-color: #422006;
+            color: #fef3c7;
             text-align: center;
-            padding: 3rem 0;
+            padding: 4rem 0;
             margin-top: 5rem;
         }
 
-        footer p {
-            font-size: 0.9rem;
-        }
-
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                padding: 1rem;
-            }
-            nav ul {
-                margin-top: 15px;
-            }
-            nav ul li {
-                margin: 0 10px;
-            }
-            .hero h1 {
-                font-size: 2.2rem;
-            }
+        .footer-warning {
+            color: #fbbf24;
+            font-weight: bold;
+            margin-top: 15px;
+            font-size: 1rem;
+            text-transform: uppercase;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo">SwiftShop</div>
+        <div class="logo">আলু <span>ব্যাপারী</span></div>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">Categories</a></li>
-                <li><a href="#">Support</a></li>
+                <li><a href="#">বাজার সওদা</a></li>
+                <li><a href="#">পুরাতন স্টক</a></li>
+                <li><a href="#">দরদাম কেন্দ্র</a></li>
+                <li><a href="#">মামার সাথে আলাপ</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="hero">
-        <h1>Premium Collection</h1>
-        <p>Discover the latest trends in tech and fashion with worldwide shipping and 24/7 support.</p>
-        <a href="#shop" class="shop-now-btn">Shop Collection</a>
+        <h1>তাজা আলু, নাই কোনো বালু!</h1>
+        <p>"জীবন অস্থায়ী, কিন্তু আলু ভর্তার প্রতি ভালোবাসা চিরস্থায়ী।"</p>
+        <a href="#shop" class="shop-now-btn">এখনই কিনুন!</a>
     </section>
 
     <div class="container" id="shop">
-        <h2 class="section-title">Featured Products</h2>
+        <h2 class="section-title">স্পেশাল ডিল (অফার সীমিত)</h2>
         
         <div class="product-grid">
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=500&q=80" alt="Smart Watch">
-                <h3>Aegis Smart Watch</h3>
-                <p class="price">$199.99</p>
-                <button class="add-to-cart">Add to Cart</button>
+                <img src="https://images.unsplash.com/photo-1518977676601-b53f02bad675?w=500" alt="Gaming Alu">
+                <h3>গেমিং আলু (RGB)</h3>
+                <p class="desc">পিসি-র ওপর রাখলে ২% এফপিএস বাড়বে। গ্যারান্টি ১০০%।</p>
+                <p class="price">৳ ৪২০.০০</p>
+                <button class="add-to-cart">ব্যাগে ভরুন</button>
             </div>
 
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=500&q=80" alt="Headphones">
-                <h3>Studio Headphones</h3>
-                <p class="price">$149.00</p>
-                <button class="add-to-cart">Add to Cart</button>
+                <img src="https://images.unsplash.com/photo-1618512496248-a07fe83aa8cb?w=500" alt="Onions">
+                <h3>ব্রেকআপ-প্রুফ পেঁয়াজ</h3>
+                <p class="desc">কাটার সময় এক ফোঁটাও চোখ দিয়ে পানি পড়বে না। একদম জাদুকরী!</p>
+                <p class="price">৳ ১২০.০০</p>
+                <button class="add-to-cart">ব্যাগে ভরুন</button>
             </div>
 
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=500&q=80" alt="Sneakers">
-                <h3>Cloud Walkers</h3>
-                <p class="price">$85.50</p>
-                <button class="add-to-cart">Add to Cart</button>
+                <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=500" alt="Ginger">
+                <h3>আদা প্র we ম্যাক্স</h3>
+                <p class="desc">অতিরিক্ত ঝাজালো। সর্দি, কাশি আর পরীক্ষার টেনশন দূর করে।</p>
+                <p class="price">৳ ২৫০.০০</p>
+                <button class="add-to-cart">ব্যাগে ভরুন</button>
             </div>
 
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1585333127302-c29019867980?auto=format&fit=crop&w=500&q=80" alt="Camera">
-                <h3>Pro DSLR Camera</h3>
-                <p class="price">$1,200.00</p>
-                <button class="add-to-cart">Add to Cart</button>
+                <img src="https://images.unsplash.com/photo-1506477331477-33d5d8b3dc85?w=500" alt="Lemon">
+                <h3>প্যানিক অ্যাটাক লেবু</h3>
+                <p class="desc">এক চিমটি রসে সব মানসিক অশান্তি শেষ। শান্তি আর শান্তি!</p>
+                <p class="price">৳ ১০.০০</p>
+                <button class="add-to-cart">ব্যাগে ভরুন</button>
             </div>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2026 SwiftShop Inc. All rights reserved.</p>
+        <p>&copy; ২০২৬ আলু ব্যাপারী গ্লোবাল এক্সপোর্ট লিমিটেড।</p>
+        <p class="footer-warning">বিক্রিত মাল ফেরত লওয়া হয় না (গলি পার হওয়ার পর আর চিনিনা!)</p>
     </footer>
 
 </body>
