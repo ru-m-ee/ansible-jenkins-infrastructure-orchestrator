@@ -1,0 +1,21 @@
+---
+- name: Deploy Static Website on Apache2 via Jenkins User
+  hosts: web_servers
+  become: yes
+  
+  tasks:
+    - name: Apache2 Install 
+      apt:
+        name: apache2
+        state: present
+        update_cache: yes
+
+    - name: Push files to the remote servers
+      copy:
+        src: index.html
+        dest: /var/www/html/index.html
+
+    - name: Step 3 - Apache2 Service restart kora
+      service:
+        name: apache2
+        state: restarted
